@@ -1,0 +1,13 @@
+<h3>Configure and send transaction</h3>
+
+<div style="background-color: rgb(43, 48, 59)">
+  <ngx-json-viewer [json]="defaultTx" [depth]="3"></ngx-json-viewer>
+</div>
+
+<button *ngIf="wallet" (click)="sendTransaction()" type="button">
+  Send transaction
+</button>
+
+<button *ngIf="!wallet" (click)="connectWallet()" type="button">
+  Connect wallet to send the transaction
+</button>
